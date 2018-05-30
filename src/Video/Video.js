@@ -23,7 +23,7 @@ class VideoElementComponent extends Component {
     } = this.props.data;
 
     return (
-      <Video src={this.props.data.url}></Video>
+      <Video controls src={this.props.data.url}></Video>
     )
   }
 }
