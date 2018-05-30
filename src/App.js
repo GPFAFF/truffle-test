@@ -31,7 +31,7 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.videoData[0]);
+    console.log(this.state.videoData);
 
     return (
       <div className="App">
