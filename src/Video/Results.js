@@ -3,22 +3,27 @@ import PropTypes from 'prop-types';
 import TagElementComponent from './Tags';
 import VideoElementComponent from './Video';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import slug from 'slugify';
 
 import styled from 'styled-components';
+
+const TagContainer = styled.div `
+  margin: 0 auto;
+  width: 500px;
+`
 
 class Results extends Component {
 
   static propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
-    portrait_asset_video_asset: PropTypes.object,
+    associated_video_assets: PropTypes.object,
   }
 
-  renderVideo = (portrait_asset_video_asset) => {
-    if (portrait_asset_video_asset == null) return;
-    const videoArray = portrait_asset_video_asset.mp4_renditions[3];
+  renderVideo = (associated_video_assets) => {
+    if (associated_video_assets == null) return;
+    const videoArray = associated_video_assets[0].video_asset;
     console.log(videoArray);
     return (
       <div className='videos'>
@@ -31,11 +36,11 @@ class Results extends Component {
   renderTags = (tags) => {
     if (tags == null) return;
     return (
-      <div className='tags'>
+      <TagContainer>
         {tags.map((tag, index) =>
           <TagElementComponent key={index} data={tag} />
         )}
-      </div>
+      </TagContainer>
     )
   }
 
@@ -44,7 +49,7 @@ class Results extends Component {
     const {
       title,
       description,
-      portrait_asset_video_asset,
+      associated_video_assets,
       tags,
     } = this.props.data;
 
@@ -54,7 +59,7 @@ class Results extends Component {
       <div className="cards">
         <h2>{title}</h2>
         <h3>{description}</h3>
-        {this.renderVideo(portrait_asset_video_asset)}
+        {this.renderVideo(associated_video_assets)}
         {this.renderTags(tags)}
         {/* <div className='tags'>
           {tags.map(tag =>

@@ -4,26 +4,26 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Video = styled.video `
-  border: 2px solid magenta;
+  border: 2px solid #333;
   width: 100%;
   background-size: cover;
-  height: 300px;
+  height: auto;
 `
 
 class VideoElementComponent extends Component {
 
   static propTypes = {
-    url: PropTypes.string,
+    webm: PropTypes.string,
   }
 
   render() {
 
     const {
-      url,
+      webm,
     } = this.props.data;
 
     return (
-      <Video controls src={this.props.data.url}></Video>
+      <Video controls src={webm}></Video>
     )
   }
 }
