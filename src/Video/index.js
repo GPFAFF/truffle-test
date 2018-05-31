@@ -4,7 +4,12 @@ import Results from './Results';
 
 import styled from 'styled-components';
 
+const VideoContainer = styled.div `
+  margin: 0 auto;
+`
+
 class VideoComponent extends Component {
+
   static propTypes = {
     videoData: PropTypes.array.isRequired,
   }
@@ -12,11 +17,11 @@ class VideoComponent extends Component {
   render() {
 
     return (
-      <div className="video-container">
+      <VideoContainer className='video'>
         {this.props.videoData.map(
           details => <Results key={details.id} data={details} />
         )}
-      </div>
+      </VideoContainer>
     )
   }
 }

@@ -13,6 +13,10 @@ const TagContainer = styled.div `
   width: 500px;
 `
 
+const Cards = styled.div `
+  text-align: left;
+`
+
 class Results extends Component {
 
   static propTypes = {
@@ -54,24 +58,18 @@ class Results extends Component {
       tags,
     } = this.props.data;
 
-    // console.log('AVA', typeof portrait_asset_video_asset)
-
     return (
-      <div className="cards">
+      <Cards>
         <h2>{title}</h2>
         <h3>{description}</h3>
         {this.renderVideo(associated_video_assets)}
         {this.renderTags(tags)}
-        {/* <div className='tags'>
-          {tags.map(tag =>
-            <TagElementComponent key={tag.id} data={tag} />
-          )}
-        </div> */}
+
         {/* <Link to={`/talks/${id}/${slug(name)}`}>
           <h2 className="card_title">{name}</h2>
           <img className="card_image" src={picture} alt={`Label of ${name}`} />
         </Link> */}
-      </div>
+      </Cards>
     );
   }
 }
