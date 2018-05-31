@@ -27,14 +27,8 @@ class App extends Component {
 
   loadDependency = async () => {
 
-    console.log(TestData);
-
     // const response = await fetch('http://tm-kitchen-api-alpha.herokuapp.com/videos?api_key=homework&auth_token=1&limit=10&workflow_status=ready')
     // .then(res => res.json());
-
-    // const response = fetch(JSON)
-    //   .then(res => res.json())
-    //   .then(data => console.log(data))
 
     const chunks = TestData.map(chunk => chunk);
 

@@ -19,15 +19,16 @@ class Results extends Component {
     title: PropTypes.string,
     description: PropTypes.string,
     associated_video_assets: PropTypes.object,
+    square_asset_video_asset: PropTypes.object,
   }
 
-  renderVideo = (associated_video_assets) => {
+  renderVideo = (associated_video_assets, square_asset_video_asset) => {
     if (associated_video_assets == null) return;
-    const videoArray = associated_video_assets[0].video_asset;
-    console.log(videoArray);
+    const mergedObject = {...associated_video_assets, ...square_asset_video_asset};
+    const videos = mergedObject[0].video_asset;
     return (
       <div className='videos'>
-        <VideoElementComponent data={videoArray} />
+        <VideoElementComponent data={videos} />
       </div>
     )
   }

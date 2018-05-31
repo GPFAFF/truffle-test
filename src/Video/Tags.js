@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import styled from 'styled-components';
 
@@ -24,15 +23,7 @@ const TagElement = styled.div `
 `
 class TagElementComponent extends Component {
 
-  static propTypes = {
-    tags: PropTypes.string,
-  }
-
   render() {
-
-    const {
-      tags,
-    } = this.props.data;
 
     return (
       <TagElement>{this.props.data}</TagElement>
