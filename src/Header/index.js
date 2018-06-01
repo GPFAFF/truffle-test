@@ -8,7 +8,7 @@ import styled from 'styled-components'
 const Header = styled.header `
   display: block;
   text-align: left;
-  padding: 40px 0;
+  padding: 40px;
 `
 
 class HeaderComponent extends Component {

@@ -17,6 +17,14 @@ const Cards = styled.div `
   text-align: left;
 `
 
+const Title = styled.h2 `
+  padding: 0 40px;
+`
+
+const Description = styled.h3 `
+  padding: 0 40px;
+`
+
 class Results extends Component {
 
   static propTypes = {
@@ -60,8 +68,8 @@ class Results extends Component {
 
     return (
       <Cards>
-        <h2>{title}</h2>
-        <h3>{description}</h3>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
         {this.renderVideo(associated_video_assets)}
         {this.renderTags(tags)}
       </Cards>

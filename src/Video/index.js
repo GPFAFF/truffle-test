@@ -10,7 +10,7 @@ const VideoContainer = styled.div `
 const Button = styled.button `
   border-radius: 3px;
   padding: 16px 24px;
-  margin: 1em;
+  margin: 40px 16px;
   background: #333;
   width: 180px;
   color: white;

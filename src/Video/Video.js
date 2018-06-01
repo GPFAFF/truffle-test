@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Video = styled.video `
-  border: 2px solid #333;
   width: 100%;
   background-size: cover;
   height: auto;

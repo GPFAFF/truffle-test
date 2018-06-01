@@ -16,8 +16,8 @@ const TagElement = styled.div `
   &:hover {
     cursor: pointer;
     transition: 0.2s ease-in;
-    color: #333;
-    background-color: white;
+    color: white;
+    background-color: #555;
     box-shadow: 2px 2px 2px #333;
   }
 `
