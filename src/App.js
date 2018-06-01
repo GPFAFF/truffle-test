@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import Nav from './Nav';
-import Button from './Button';
 import VideoComponent from './Video';
 import TestData from './test-data.json'
 import './App.css';
@@ -35,15 +34,8 @@ class App extends Component {
     this.setState({
       videoData: chunks,
     });
+
   }
-
-//   .filter((i, index) => (index < 3))
-//              .map((i, index) => {
-//                    return (
-//                      <myview item={i} key={i.id} />
-//                    );
-//               });
-
 
   render() {
 
@@ -53,14 +45,6 @@ class App extends Component {
         <Container>
           <Header />
           <VideoComponent videoData={this.state.videoData} />
-          <Button
-            className='next_button'
-            name='Next Vid!'
-          />
-          <Button
-            className='previous_button'
-            name='Previous Vid!'
-          />
         </Container>
       </div>
     );

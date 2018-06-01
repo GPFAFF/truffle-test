@@ -64,11 +64,6 @@ class Results extends Component {
         <h3>{description}</h3>
         {this.renderVideo(associated_video_assets)}
         {this.renderTags(tags)}
-
-        {/* <Link to={`/talks/${id}/${slug(name)}`}>
-          <h2 className="card_title">{name}</h2>
-          <img className="card_image" src={picture} alt={`Label of ${name}`} />
-        </Link> */}
       </Cards>
     );
   }
