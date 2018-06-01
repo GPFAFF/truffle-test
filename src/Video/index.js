@@ -44,10 +44,7 @@ class VideoComponent extends Component {
 
   //next video function
   nextVideo = () => {
-    console.log('next')
-
     if (this.state.counter < this.props.videoData.length - 1) {
-      console.log('next');
       this.setState({
         counter : this.state.counter + 1
       })
@@ -55,7 +52,6 @@ class VideoComponent extends Component {
   }
   //previous video function
   previousVideo = () => {
-    console.log('previous')
     if (this.state.counter > 0) {
       this.setState({
       counter : this.state.counter - 1
@@ -64,8 +60,6 @@ class VideoComponent extends Component {
   }
 
   render() {
-
-    console.log(this.props.videoData.length)
 
     if (this.props.videoData.length === 0) return <h1>Loading...</h1>
 
